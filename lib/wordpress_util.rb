@@ -2,6 +2,16 @@ require "wordpress_util/version"
 
 class WordpressUtil
   class << self
+  	##
+	# Replaces double line-breaks with paragraph elements.
+	#
+	# A group of regex replaces used to identify text formatted with newlines and
+	# replace double line-breaks with HTML paragraph tags. The remaining line-breaks
+	# after conversion become <<br />> tags, unless $br is set to '0' or 'false'.
+	#
+	# ==== Parameters
+	# * string pee The text which has to be formatted.
+	# * bool br Optional. If set, this will convert all remaining line-breaks after paragraphing. Default true.
     def wpautop(pee, br = true)
       pre_tags = {}
 
