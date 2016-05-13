@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/leonardoalifraco/wordpress_util.svg?branch=master)](https://travis-ci.org/leonardoalifraco/wordpress_util)
+
 # WordpressUtil
 
 Group of util and formatting methods defined in Wordpress and ported to Ruby.
