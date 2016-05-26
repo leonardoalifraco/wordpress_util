@@ -124,10 +124,9 @@ class WordpressUtil
 
       # Optionally insert line breaks.
       if br
-        pee = pee.gsub(Regexp.new("<(script|style).*?<\/\\1>")) do |s|
+        pee = pee.gsub(/<(script|style).*?<\/\1>/m) do |s|
           s.gsub("\n", "<WPPreserveNewline \/>")
         end
-
         # Normalize <br>
         pee = pee.gsub(/<br>|<br\/>/, "<br />")
 
